@@ -14,8 +14,8 @@ export default function AboutPage() {
     items-center pb-4 py-10 sm:py-16 px-8"
     >
       <h1 className="main-heading">
-        I Know That <span className="text-primary">Good Development</span> Means{" "}
-        <span className="text-primary">Good Business</span>
+        We Know That <span className="text-primary">Good Development</span>{" "}
+        Means <span className="text-primary">Good Business</span>
       </h1>
       <div className="flex max-w-full gap-10 overflow-x-auto add-scrollbar py-4">
         {abouts.map((about) => (
