@@ -20,7 +20,10 @@ const AboutCard = ({
   return (
     <Card className="min-w-[150px] max-w-[250px]">
       <CardHeader className="py-4 md:py-6">
-        <AspectRatio className="bg-[#121b26] rounded-md" ratio={5 / 3}>
+        <AspectRatio
+          className="bg-[#121b26] rounded-md overflow-hidden"
+          ratio={5 / 3}
+        >
           <Image
             src={image}
             alt={title}
