@@ -53,7 +53,7 @@ const WorkDetailsPage = async ({
     <>
       <h1 className="main-heading">{work.title}</h1>
       <Carousel className="mx-10">
-        <CarouselContent>
+        <CarouselContent className="sm:w-[420px]">
           {work.images.map((image) => (
             <CarouselItem key={image}>
               <div className="rounded-lg overflow-hidden w-full sm:w-[400px] sm:h-[350px]">

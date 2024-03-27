@@ -30,6 +30,7 @@ export const getWorkById = async (id: string) => {
     await connectToDatabase();
 
     const work = await Work.findById(id);
+
     return JSON.parse(JSON.stringify(work));
   } catch (error) {
     handleError(error);

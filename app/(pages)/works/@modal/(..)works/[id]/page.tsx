@@ -29,12 +29,10 @@ const WorkModalPage = async ({
 }) => {
   const work: Work = await getWorkById(id);
 
-  console.log(work);
-
   return (
     <div className="md:w-[720px] flex flex-col md:flex-row gap-4">
       <Carousel className="mx-10">
-        <CarouselContent>
+        <CarouselContent className="sm:w-[420px]">
           {work.images.map((image) => (
             <CarouselItem key={image}>
               <div className="rounded-lg overflow-hidden w-full sm:w-[400px] sm:h-[350px]">

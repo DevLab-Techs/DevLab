@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "software applications",
     "applications",
   ],
+  metadataBase: new URL("http://localhost:300"),
   // openGraph: {
   //   images: [
   //     "/logo.png",
