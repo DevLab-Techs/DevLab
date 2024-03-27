@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "software applications",
     "applications",
   ],
-  metadataBase: new URL("http://localhost:300"),
+  metadataBase: new URL("https://devlab-tech.vercel.app"),
   // openGraph: {
   //   images: [
   //     "/logo.png",
