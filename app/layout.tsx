@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navbar from "@/components/shared/navbar";
 import Footer from "@/components/shared/footer";
-import MotionProvider from "@/components/providers/motion-provider";
+// import MotionProvider from "@/components/providers/motion-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,6 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://devlab-tech.com"),
   title: {
     default: "DevLab",
     template: "%s | DevLab",
@@ -25,12 +26,19 @@ export const metadata: Metadata = {
   },
   keywords: [
     "devlab",
+    "devlab tech",
+    "devlab company",
+    "devlab software",
+    "software development company",
+    "web development company",
     "technology",
     "software",
     "software applications",
     "applications",
   ],
-  metadataBase: new URL("https://devlab-tech.vercel.app"),
+  icons: {
+    apple: "/apple-touch-icon.png",
+  },
   // openGraph: {
   //   images: [
   //     "/logo.png",
@@ -54,6 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="add-scrollbar">
+      <head></head>
       <body
         className={cn(
           poppins.className,
@@ -67,8 +76,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="flex-1 overflow-auto add-scrollbar">
-            <MotionProvider>{children}</MotionProvider>
+          <main className="flex-1 overflow-y-auto overflow-x-hidden add-scrollbar">
+            {/* <MotionProvider> */}
+            {children}
+            {/* </MotionProvider> */}
           </main>
           <Footer />
         </ThemeProvider>

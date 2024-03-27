@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Not Found",
+  description: "The page you are looking does not exist.",
+};
+
 import NavButtons from "@/components/shared/nav-buttons";
 
 const NotFound = () => {

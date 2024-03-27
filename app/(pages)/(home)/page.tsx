@@ -11,7 +11,6 @@ export default function Home() {
       variants={homeVariants}
       initial="hide"
       animate="show"
-      exit="exit"
       className="min-h-full flex flex-col gap-4 md:gap-10 justify-center items-center"
     >
       <div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cache } from "react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
 import {

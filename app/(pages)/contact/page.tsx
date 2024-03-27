@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { IoIosMail } from "react-icons/io";
 import { BsTelephoneFill } from "react-icons/bs";
 
@@ -6,6 +6,13 @@ import ContactFrom from "@/components/shared/contact-form";
 import NavButtons from "@/components/shared/nav-buttons";
 import { Button } from "@/components/ui/button";
 import Socials from "@/components/shared/socials";
+import {
+  MotionDiv,
+  MotionH1,
+  MotionSection,
+  contactVariants,
+  formVariants,
+} from "@/lib/motion";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -13,15 +20,21 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section
+    <MotionSection
+      variants={contactVariants}
+      initial="hide"
+      animate="show"
       className="min-h-full flex flex-col gap-5 justify-evenly
     items-center py-6 px-8"
     >
-      <h1 className="main-heading">
+      <MotionH1 variants={formVariants} className="main-heading">
         Take A <span className="text-primary">Coffee</span> &{" "}
         <span className="text-primary">Chat</span> With Us
-      </h1>
-      <div className="flex flex-col md:flex-row gap-4">
+      </MotionH1>
+      <MotionDiv
+        variants={formVariants}
+        className="flex flex-col md:flex-row gap-4"
+      >
         <Button
           size="contact"
           variant="contact"
@@ -50,10 +63,12 @@ export default function ContactPage() {
             (+20) 106-9036-485
           </a>
         </Button>
-      </div>
+      </MotionDiv>
       <ContactFrom />
-      <NavButtons firstLink="/skills" firstTitle="Skills" />
+      <MotionDiv variants={formVariants}>
+        <NavButtons firstLink="/skills" firstTitle="Skills" />
+      </MotionDiv>
       <Socials />
-    </section>
+    </MotionSection>
   );
 }

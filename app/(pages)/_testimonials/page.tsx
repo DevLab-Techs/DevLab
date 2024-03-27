@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 import { getTestimonials } from "@/lib/data/testimonials";
 import TestimonialsCard from "@/components/shared/testimonials-card";

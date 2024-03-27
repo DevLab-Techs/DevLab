@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { socials } from "@/lib/constants";
+import { MotionDiv, formVariants } from "@/lib/motion";
 
 const Socials = () => {
   return (
-    <div className="sm:absolute flex flex-row sm:flex-col-reverse left-4 bottom-8 md:left-8">
+    <MotionDiv
+      variants={formVariants}
+      className="sm:absolute flex flex-row sm:flex-col-reverse left-4 bottom-8 md:left-8"
+    >
       {socials.map(({ link, Icon }) => (
         <Button
           key={link}
@@ -19,7 +23,7 @@ const Socials = () => {
           </a>
         </Button>
       ))}
-    </div>
+    </MotionDiv>
   );
 };
 

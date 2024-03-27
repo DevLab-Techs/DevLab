@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: 
+Sitemap: https://devlab-tech.com/sitemap.xml

@@ -1,5 +1,6 @@
 import { getWorks } from "@/lib/data/works";
-import WorksCard from "./works-card";
+import WorksCard from "@/components/shared/works-card";
+import { MotionDiv, cardVariants } from "@/lib/motion";
 
 type Work = {
   _id: string;
@@ -16,11 +17,13 @@ const WorksSlider = async ({ tag }: { tag?: string }) => {
 
   return (
     <div
-      className="add-scrollbar flex max-w-full overflow-x-auto
+      className="add-scrollbar flex max-w-full overflow-x-auto overflow-y-hidden
 gap-3 sm:gap-5 pb-4"
     >
-      {works.map((work: Work) => (
-        <WorksCard key={work._id} work={work} />
+      {works.map((work: Work, i: number) => (
+        <MotionDiv variants={cardVariants} key={work._id}>
+          <WorksCard work={work} />
+        </MotionDiv>
       ))}
     </div>
   );

@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
 } from "@/components/ui/card";
-import { AspectRatio } from "../ui/aspect-ratio";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const AboutCard = ({
   image,
@@ -18,7 +18,7 @@ const AboutCard = ({
   description: string;
 }) => {
   return (
-    <Card className="min-w-[150px] max-w-[250px]">
+    <Card className="min-w-[150px] max-w-[250px] h-full hover:scale-110 transition duration-500">
       <CardHeader className="py-4 md:py-6">
         <AspectRatio
           className="bg-[#121b26] rounded-md overflow-hidden"

@@ -1,4 +1,5 @@
 import { getExperiences } from "@/lib/data/experiences";
+import { MotionDiv, experienceVariants } from "@/lib/motion";
 
 type Experience = {
   _id: string;
@@ -11,7 +12,12 @@ const ExperiencesCard = async () => {
   const experiences = await getExperiences();
 
   return (
-    <div className="flex flex-col justify-start self-stretch space-y-4">
+    <MotionDiv
+      variants={experienceVariants}
+      initial="hide"
+      animate="show"
+      className="flex flex-col justify-start self-stretch space-y-4"
+    >
       {experiences.map((exp: Experience) => (
         <div key={exp._id}>
           <h1 className="text-primary text-lg font-bold sm:text-xl">
@@ -25,7 +31,7 @@ const ExperiencesCard = async () => {
           </p>
         </div>
       ))}
-    </div>
+    </MotionDiv>
   );
 };
 

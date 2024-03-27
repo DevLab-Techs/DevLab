@@ -1,10 +1,21 @@
-import { skills } from "@/lib/constants";
 import Image from "next/image";
+
+import { skills } from "@/lib/constants";
+import {
+  MotionDiv,
+  skillsFirstVariant,
+  skillsSecondVariant,
+} from "@/lib/motion";
 
 const SkillsCard = () => {
   return (
     <div>
-      <div className="grid gap-3 grid-cols-5">
+      <MotionDiv
+        variants={skillsFirstVariant}
+        initial="hide"
+        animate="show"
+        className="grid gap-3 grid-cols-5"
+      >
         {skills.map((skill, i) => {
           if (i < 10)
             return (
@@ -26,8 +37,13 @@ const SkillsCard = () => {
               </div>
             );
         })}
-      </div>
-      <div className="grid gap-3 grid-cols-5 mt-3">
+      </MotionDiv>
+      <MotionDiv
+        variants={skillsSecondVariant}
+        initial="hide"
+        animate="show"
+        className="grid gap-3 grid-cols-5 mt-3"
+      >
         {skills.map((skill, i) => {
           if (i >= 10)
             return (
@@ -49,7 +65,7 @@ const SkillsCard = () => {
               </div>
             );
         })}
-      </div>
+      </MotionDiv>
     </div>
   );
 };

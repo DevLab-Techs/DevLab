@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
+import { MotionSpan, navButtonsVariants } from "@/lib/motion";
 
 const NavButtons = ({
   firstLink,
@@ -23,8 +24,14 @@ const NavButtons = ({
           className="transition-colors duration-300 text-xl sm:text-3xl md:text-4xl font-bold capitalize"
         >
           <Link href={firstLink}>
-            <FaArrowLeft className="mr-2 md:mr-4" />
-            {firstTitle}
+            <MotionSpan
+              variants={navButtonsVariants}
+              whileHover="hover"
+              className="flex items-center"
+            >
+              <FaArrowLeft className="mr-2 md:mr-4" />
+              {firstTitle}
+            </MotionSpan>
           </Link>
         </Button>
       )}
@@ -35,8 +42,14 @@ const NavButtons = ({
           className="transition-colors duration-300 text-xl sm:text-3xl md:text-4xl font-bold capitalize"
         >
           <Link href={secondLink}>
-            {secondTitle}
-            <FaArrowRight className="ml-2 md:ml-4" />
+            <MotionSpan
+              variants={navButtonsVariants}
+              whileHover="hover"
+              className="flex items-center"
+            >
+              {secondTitle}
+              <FaArrowRight className="ml-2 md:ml-4" />
+            </MotionSpan>
           </Link>
         </Button>
       )}
