@@ -26,7 +26,7 @@ const WorksCard = ({ work }: { work: Work }) => {
             alt={work.title}
             width={500}
             height={450}
-            className="object-contain"
+            className="w-full h-full"
           />
         </div>
       </CardContent>
