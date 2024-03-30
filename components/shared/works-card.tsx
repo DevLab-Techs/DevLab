@@ -35,7 +35,7 @@ const WorksCard = ({ work }: { work: Work }) => {
         justify-evenly absolute top-0 left-0 w-full h-full z-30 bg-black/80
         transition duration-300"
       >
-        <h1 className="text-2xl font-semibold">{work.title}</h1>
+        <h2 className="text-2xl font-semibold">{work.title}</h2>
         <Button size="default" variant="link" asChild>
           <MotionA
             //@ts-ignore

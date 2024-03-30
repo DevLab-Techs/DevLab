@@ -19,6 +19,7 @@ export default function Home() {
           width={100}
           height={153.53}
           alt="Icon"
+          title="DevLab"
           className="w-16 md:w-24"
         />
       </div>

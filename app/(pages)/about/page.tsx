@@ -12,6 +12,11 @@ import {
 
 export const metadata: Metadata = {
   title: "About",
+  description:
+    "Discover DevLab Tech - a leading software company specializing in innovative full stack solutions. Our dedicated team harnesses a diverse toolkit of cutting-edge technologies and libraries, including React.js, Node.js, Next.js, and more. Learn about our mission, values, and the expertise behind our seamless integration of front-end and back-end technologies, delivering tailored solutions that exceed client expectations.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

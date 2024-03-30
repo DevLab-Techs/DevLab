@@ -16,6 +16,11 @@ import {
 
 export const metadata: Metadata = {
   title: "Contact",
+  description:
+    "Connect with DevLab Tech to discuss your software development needs. Whether you have questions, inquiries, or project proposals, our team is ready to assist you. Reach out via phone, email, or our convenient contact form, and let's collaborate to bring your ideas to fruition.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

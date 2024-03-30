@@ -34,7 +34,7 @@ const AboutCard = ({
         </AspectRatio>
       </CardHeader>
       <CardContent className="pb-2 md:pb-6">
-        <p className="text-center text-primary font-bold">{title}</p>
+        <h2 className="text-center text-primary font-bold">{title}</h2>
         <CardDescription className="mt-2 text-xs lg:text-sm text-center">
           {description}
         </CardDescription>

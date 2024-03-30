@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useMemo } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
@@ -14,7 +14,6 @@ type Filter = {
 
 const Tags = ({ filters }: { filters: Filter[] }) => {
   const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const tag = useMemo(() => {
@@ -23,13 +22,14 @@ const Tags = ({ filters }: { filters: Filter[] }) => {
 
   return (
     <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
+      <Button variant={tag === "" ? "default" : "secondary"} asChild size="sm">
+        <Link href="/works" className="text-xs sm:text-sm">
+          All
+        </Link>
+      </Button>
       {filters.map((filter: Filter) => (
         <Button
-          variant={
-            filter.tag === tag || (filter.tag === "all" && tag === "")
-              ? "default"
-              : "secondary"
-          }
+          variant={filter.tag === tag ? "default" : "secondary"}
           asChild
           size="sm"
           key={filter._id}

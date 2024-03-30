@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/carousel";
 import { getWorkById } from "@/lib/data/works";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 
 const getWork = cache(async (id: string) => {
   const work: Work = await getWorkById(id);

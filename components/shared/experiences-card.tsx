@@ -20,9 +20,9 @@ const ExperiencesCard = async () => {
     >
       {experiences.map((exp: Experience) => (
         <div key={exp._id}>
-          <h1 className="text-primary text-lg font-bold sm:text-xl">
+          <p className="text-primary text-lg font-bold sm:text-xl">
             {exp.year}
-          </h1>
+          </p>
           {exp.title && (
             <h2 className="sm:text-xl text-lg font-bold">{exp.title}</h2>
           )}

@@ -15,27 +15,37 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://devlab-tech.com"),
+  metadataBase: new URL("https://www.devlab-tech.com"),
   title: {
-    default: "DevLab",
-    template: "%s | DevLab",
+    default: "DevLab Tech Software Company",
+    template: "%s | DevLab Tech Co.",
   },
-  description: "DevLab Company for Software Applications",
+  description:
+    "DevLab Tech is your premier partner for developing cutting-edge full stack applications. Our expert team specializes in creating bespoke solutions tailored to your unique needs, leveraging the latest technologies to deliver seamless and scalable software experiences. From front-end design to back-end development, trust DevLab Tech to bring your vision to life with precision and innovation.",
   twitter: {
     card: "summary_large_image",
   },
   keywords: [
     "devlab",
     "devlab tech",
-    "devlab company",
-    "devlab software",
+    "devlab technology",
+    "devlab co",
     "software development company",
     "web development company",
+    "mobile app development company",
+    "react js developer",
+    "nodejs developer",
+    "full stack developer",
+    "devlab company",
+    "devlab software",
     "technology",
     "software",
     "software applications",
     "applications",
   ],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     apple: "/apple-touch-icon.png",
   },
