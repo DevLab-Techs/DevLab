@@ -28,6 +28,9 @@ export async function generateMetadata({
   return {
     title: work.title,
     description: work.description,
+    alternates: {
+      canonical: "/",
+    },
   };
 }
 
